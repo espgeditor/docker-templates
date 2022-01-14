@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Name>espgeditor</Name>
+  <Name>espgeditor-beta</Name>
   <Beta>False</Beta>
   <Category>Tools:Utilities</Category>
   <Overview>espgeditor-beta</Overview>
