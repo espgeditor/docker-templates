@@ -47,7 +47,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:60808]/</WebUI>
+  <WebUI>http://[IP]:[PORT:60808]/vnc.html?autoconnect=true</WebUI>
   <Banner></Banner>
   <Icon></Icon>
 </Container>
