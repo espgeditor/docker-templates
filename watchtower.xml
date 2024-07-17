@@ -43,7 +43,7 @@
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/watchtower</HostDir>
-      <ContainerDir>/app/</ContainerDir>
+      <ContainerDir>/tmp/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
