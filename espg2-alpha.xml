@@ -43,7 +43,7 @@
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/espg2-alpha</HostDir>
-      <ContainerDir>/app/config</ContainerDir>
+      <ContainerDir>/app/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
