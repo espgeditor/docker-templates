@@ -17,13 +17,13 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>55583</HostPort>
-        <ContainerPort>8000</ContainerPort>
+        <HostPort>58083</HostPort>
+        <ContainerPort>8080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>55553</HostPort>
-        <ContainerPort>5000</ContainerPort>
+        <HostPort>50083</HostPort>
+        <ContainerPort>8000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -47,7 +47,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:55583]/</WebUI>
+  <WebUI>http://[IP]:[PORT:58083]/</WebUI>
   <Banner></Banner>
   <Icon>http://espg.xyz/espg.png</Icon>
 </Container>
