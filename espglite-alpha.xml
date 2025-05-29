@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>espg</Name>
+  <Repository>drew4/espglite-alpha</Repository>
+  <Registry>https://hub.docker.com/r/espg/espglite-alpha</Registry>
+  <Network>bridge</Network>
+  <MyIP></MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support></Support>
+  <Project>ESPG Lite</Project>
+  <Overview>
+    ESPG Lite
+  </Overview>
+  <Category>MediaServer:Video MediaServer:Movies MediaServer:TV</Category>
+  <WebUI>http://[IP]:[PORT:59982]</WebUI>
+  
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID" Type="Variable" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID" Type="Variable" Display="advanced" Required="true" Mask="false"/>
+  
+  <Labels>
+    <Label>
+      <Name>org.opencontainers.image.title</Name>
+      <Value>ESPGLite</Value>
+    </Label>
+    <Label>
+      <Name>org.opencontainers.image.description</Name>
+      <Value>ESPGLite</Value>
+    </Label>
+  </Labels>
+  
+  <ExtraParams></ExtraParams>
+  
+  <PostArgs></PostArgs>
+  
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>59982</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+</Container>
