@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>espg</Name>
-  <Repository>drew4/espglite-alpha</Repository>
+  <Repository>espg/espglite-alpha</Repository>
   <Registry>https://hub.docker.com/r/espg/espglite-alpha</Registry>
   <Network>bridge</Network>
   <MyIP></MyIP>
