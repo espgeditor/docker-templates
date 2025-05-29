@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>espg</Name>
+  <Name>espglite-alpha</Name>
   <Repository>espg/espglite-alpha</Repository>
   <Registry>https://hub.docker.com/r/espg/espglite-alpha</Registry>
   <Network>bridge</Network>
