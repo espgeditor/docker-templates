@@ -38,7 +38,7 @@
     <Publish>
       <Port>
         <HostPort>59982</HostPort>
-        <ContainerPort>8080</ContainerPort>
+        <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
