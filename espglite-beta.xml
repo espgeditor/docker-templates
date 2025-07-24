@@ -26,6 +26,7 @@
   <Config Name="WebUI Port" Target="80" Default="59981" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">59981</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID for file permissions" Type="Variable" Display="advanced" Required="true" Mask="false">1000</Config>
   <Config Name="PGID" Target="PGID" Default="1000" Mode="" Description="Group ID for file permissions" Type="Variable" Display="advanced" Required="true" Mask="false">1000</Config>
+  <Config Name="Config Directory" Target="/app/config" Default="/mnt/user/appdata/espglite-beta" Mode="rw" Description="Configuration and database storage" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/espglite</Config>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -38,7 +39,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/espglite</HostDir>
+      <HostDir>/mnt/user/appdata/espglite-beta</HostDir>
       <ContainerDir>/app/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
