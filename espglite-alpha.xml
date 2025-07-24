@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Container version="2">
   <Name>espglite-alpha</Name>
   <Repository>espg/espglite-alpha</Repository>
@@ -10,29 +10,23 @@
   <Support></Support>
   <Project>ESPG Lite</Project>
   <Overview>
-    ESPG Lite
+    ESPG Lite - Alpha
   </Overview>
   <Category>MediaServer:Video MediaServer:Movies MediaServer:TV</Category>
   <WebUI>http://[IP]:[PORT:59982]</WebUI>
+  <TemplateURL></TemplateURL>
   <Icon>http://espg.xyz/espglite.png</Icon>
-  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID" Type="Variable" Display="advanced" Required="true" Mask="false"/>
-  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID" Type="Variable" Display="advanced" Required="true" Mask="false"/>
-  
-  <Labels>
-    <Label>
-      <Name>org.opencontainers.image.title</Name>
-      <Value>ESPGLite</Value>
-    </Label>
-    <Label>
-      <Name>org.opencontainers.image.description</Name>
-      <Value>ESPGLite</Value>
-    </Label>
-  </Labels>
-  
   <ExtraParams></ExtraParams>
-  
   <PostArgs></PostArgs>
-  
+  <CPUset></CPUset>
+  <DateInstalled></DateInstalled>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <Requires></Requires>
+  <Config Name="WebUI Port" Target="80" Default="59982" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">59982</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID for file permissions" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID for file permissions" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="Config Directory" Target="/app/config" Default="/mnt/user/appdata/espglite-alpha" Mode="rw" Description="Configuration and database storage" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/espglite-alpha</Config>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -43,4 +37,11 @@
       </Port>
     </Publish>
   </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/espglite-alpha</HostDir>
+      <ContainerDir>/app/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
 </Container>
