@@ -10,7 +10,7 @@
   <Support></Support>
   <Project>ESPG Lite</Project>
   <Overview>
-    ESPG Lite - IPTV/EPG Management Application with sports event integration, provider management, and automated M3U/XMLTV generation.
+    ESPG Lite - Beta
   </Overview>
   <Category>MediaServer:Video MediaServer:Movies MediaServer:TV</Category>
   <WebUI>http://[IP]:[PORT:59981]</WebUI>
@@ -26,8 +26,6 @@
   <Config Name="WebUI Port" Target="80" Default="59981" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">59981</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID for file permissions" Type="Variable" Display="advanced" Required="true" Mask="false">1000</Config>
   <Config Name="PGID" Target="PGID" Default="1000" Mode="" Description="Group ID for file permissions" Type="Variable" Display="advanced" Required="true" Mask="false">1000</Config>
-  <Config Name="TZ" Target="TZ" Default="America/Chicago" Mode="" Description="Timezone for scheduled tasks" Type="Variable" Display="advanced" Required="false" Mask="false">America/Chicago</Config>
-  <Config Name="Config Directory" Target="/app/config" Default="/mnt/user/appdata/espglite" Mode="rw" Description="Configuration and database storage" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/espglite</Config>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
