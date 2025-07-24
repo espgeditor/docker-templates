@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Container version="2">
   <Name>espglite-beta</Name>
   <Repository>espg/espglite-beta</Repository>
@@ -10,27 +10,24 @@
   <Support></Support>
   <Project>ESPG Lite</Project>
   <Overview>
-    ESPG Lite
+    ESPG Lite - IPTV/EPG Management Application with sports event integration, provider management, and automated M3U/XMLTV generation.
   </Overview>
   <Category>MediaServer:Video MediaServer:Movies MediaServer:TV</Category>
   <WebUI>http://[IP]:[PORT:59981]</WebUI>
-  
-  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID" Type="Variable" Display="advanced" Required="true" Mask="false"/>
-  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID" Type="Variable" Display="advanced" Required="true" Mask="false"/>
-  
-  <Labels>
-    <Label>
-      <Name>org.opencontainers.image.title</Name>
-      <Value>ESPGLite</Value>
-    </Label>
-    <Label>
-      <Name>org.opencontainers.image.description</Name>
-      <Value>ESPGLite</Value>
-    </Label>
-  </Labels>
-  
+  <TemplateURL></TemplateURL>
+  <Icon>https://raw.githubusercontent.com/espg/espglite/main/icon.png</Icon>
   <ExtraParams></ExtraParams>
-  
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DateInstalled></DateInstalled>
+  <DonateText></DonateText>
+  <DonateLink></DonateLink>
+  <Requires></Requires>
+  <Config Name="WebUI Port" Target="80" Default="59981" Mode="tcp" Description="Web interface port" Type="Port" Display="always" Required="true" Mask="false">59981</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID for file permissions" Type="Variable" Display="advanced" Required="true" Mask="false">1000</Config>
+  <Config Name="PGID" Target="PGID" Default="1000" Mode="" Description="Group ID for file permissions" Type="Variable" Display="advanced" Required="true" Mask="false">1000</Config>
+  <Config Name="TZ" Target="TZ" Default="America/Chicago" Mode="" Description="Timezone for scheduled tasks" Type="Variable" Display="advanced" Required="false" Mask="false">America/Chicago</Config>
+  <Config Name="Config Directory" Target="/app/config" Default="/mnt/user/appdata/espglite" Mode="rw" Description="Configuration and database storage" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/espglite</Config>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -41,7 +38,11 @@
       </Port>
     </Publish>
   </Networking>
-  
-  <PostArgs></PostArgs>
-  
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/espglite</HostDir>
+      <ContainerDir>/app/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
 </Container>
