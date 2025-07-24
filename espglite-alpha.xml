@@ -14,7 +14,7 @@
   </Overview>
   <Category>MediaServer:Video MediaServer:Movies MediaServer:TV</Category>
   <WebUI>http://[IP]:[PORT:59982]</WebUI>
-  
+  <Icon>http://espg.xyz/espglite.png</Icon>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User ID" Type="Variable" Display="advanced" Required="true" Mask="false"/>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group ID" Type="Variable" Display="advanced" Required="true" Mask="false"/>
   
